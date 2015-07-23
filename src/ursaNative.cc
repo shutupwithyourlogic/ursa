@@ -495,10 +495,12 @@ NAN_METHOD(RsaWrap::GeneratePrivateKey) {
     //
     // * The exponend must be positive and odd.
 
+    /*
     if (modulusBits < 512) {
         NanThrowError("Expected modulus bit count >= 512.");
         NanReturnUndefined();
     }
+    */
 
     if (exponent <= 0) {
         NanThrowError("Expected positive exponent.");
